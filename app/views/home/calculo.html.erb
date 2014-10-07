@@ -1,0 +1,111 @@
+<div style="padding-left:15px;">
+
+				<h6 style="font-size:28px;">Calculadora Prospera</h6>	
+				</br>
+				<h6 style="color:#23bc8f;">Percepciones Fijas:</h6>
+				
+
+				<div>
+					<form id="form">
+					
+					<input style="padding-left:10px; border-radius:5px; border-color:#23bc8f;" type="number" step="0.01" name="0102" class="CalcInput" value=0><label class="h7" style="padding-left:10px;">0102 - Sueldo Base</label></br>
+					
+					<input style="padding-left:10px; border-radius:5px; border-color:#23bc8f;" type="text" name="0104" class="h6" value=0><label class="h7" style="padding-left:10px;" value="0">0104 - Compensacion</label></br>
+
+					<input style="padding-left:10px; border-radius:5px; border-color:#23bc8f;" type="text" name="0105" class="h6" value=0><label class="h7" style="padding-left:10px;">0105 - Grat. Burocrata</label></br>
+
+					<input style="padding-left:10px; border-radius:5px; border-color:#23bc8f;" type="text" name="0106" class="h6" value=0><label class="h7" style="padding-left:10px;">0106 - Grat. Medica</label></br>
+					
+					<input style="padding-left:10px; border-radius:5px; border-color:#23bc8f;" type="text" name="0107" class="h6" value=0><label class="h7" style="padding-left:10px;">0107 - Grat Especial</label></br>
+
+					<input style="padding-left:10px; border-radius:5px; border-color:#23bc8f;" type="text" name="0111" class="h6" value=0><label class="h7" style="padding-left:10px;">0111 - Material Didactico</label></br>
+
+					<input style="padding-left:10px; border-radius:5px; border-color:#23bc8f;" type="text" name="0301" class="h6" value=0><label class="h7" style="padding-left:10px;">0301 - Prima Anos Serv.</label></br>
+					
+					<input style="padding-left:10px; border-radius:5px; border-color:#23bc8f;" type="text" name="0304" class="h6" value=0><label class="h7" style="padding-left:10px;">0304 - Estudios Super.</label></br>
+
+					<input style="padding-left:10px; border-radius:5px; border-color:#23bc8f;" type="text" name="0512" class="h6" value=0><label class="h7" style="padding-left:10px;">0512 - Despensa</label></br>
+
+					<input style="padding-left:10px; border-radius:5px; border-color:#23bc8f;" type="text" name="0516" class="h6" value=0><label class="h7" style="padding-left:10px;">0516 - Grat. 6 Dia</label></br>
+					
+					<input style="padding-left:10px; border-radius:5px; border-color:#23bc8f;" type="text" name="0517" class="h6" value=0><label class="h7" style="padding-left:10px;">0517 - Grat. 7 Dia</label></br>
+
+					<input style="padding-left:10px; border-radius:5px; border-color:#23bc8f;" type="text" name="0521" class="h6" value=0><label class="h7" style="padding-left:10px;">0521 - Prima Antig. Adic.</label></br>
+
+
+			</br>
+			<h6 style="color:#d9c700;">Deducciones Fijas:</h6>
+
+					<input style="padding-left:10px; border-radius:5px; border-color:#d9c700;" type="text" name="5408" class="h6" value=0><label class="h7" style="padding-left:10px;">5408 - Imp/la renta</label></br>
+					
+					<input style="padding-left:10px; border-radius:5px; border-color:#d9c700;" type="text" name="5446" class="h6" value=0><label class="h7" style="padding-left:10px;" value="0">5446 - Fondo Resist.</label></br>
+
+					<input style="padding-left:10px; border-radius:5px; border-color:#d9c700;" type="text" name="5461" class="h6" value=0><label class="h7" style="padding-left:10px;">5461 - Cta SUTEyM</label></br>
+
+					<input style="padding-left:10px; border-radius:5px; border-color:#d9c700;" type="text" name="5463" class="h6" value=0><label class="h7" style="padding-left:10px;">5463 - Cta Mut SUTEyM</label></br>
+					
+					<input style="padding-left:10px; border-radius:5px; border-color:#d9c700;" type="text" name="5540" class="h6" value=0><label class="h7" style="padding-left:10px;">5540 - Serv. Salud</label></br>
+
+					<input style="padding-left:10px; border-radius:5px; border-color:#d9c700;" type="text" name="5541" class="h6" value=0><label class="h7" style="padding-left:10px;">5541 - Fondo Sist. Solid.</label></br>
+
+					<input style="padding-left:10px; border-radius:5px; border-color:#d9c700;" type="text" name="5542" class="h6" value=0><label class="h7" style="padding-left:10px;">5542 - Sist. Capit.</label></br>
+
+			</br>
+			<h6 style="color:#d99900;">Deducciones totales:</h6>
+
+					<input style="padding-left:10px; border-radius:5px; border-color:#d99900;" type="text" name="deducciones" class="h6" value=0><label class="h7" style="padding-left:10px;">Deducciones Totales</label></br>
+
+					</form>
+
+					</br>
+					</br>
+					</br>
+					<p style="font-size:30px; color:#23bc8f; padding-left:80px;" id="capacidad"></p><h5 style="color:#23bc8f; font-size:20px;">Maxima Prima Posible</h5>
+					</br>
+					<button style="margin-bottom:30px;" class="btn btn-primary" onclick="myFunction()">Calculo la Capacidad...</button>
+					</br>
+					</br>
+					</br>
+
+				</div>
+			</div>
+
+				<script>
+				function myFunction() {
+				var P1 = parseInt(document.getElementById("#form").elements['0102'].value,10);
+				var P2 = parseInt(document.getElementById("#form").elements['0104'].value,10);
+				var P3 = parseInt(document.getElementById("#form").elements['0105'].value,10);
+				var P4 = parseInt(document.getElementById("#form").elements['0106'].value,10);
+				var	P5 = parseInt(document.getElementById("#form").elements['0107'].value,10);
+				var P6 = parseInt(document.getElementById("#form").elements['0111'].value,10);
+				var P7 = parseInt(document.getElementById("#form").elements['0301'].value,10);
+				var P8 = parseInt(document.getElementById("#form").elements['0304'].value,10);
+				var P9 = parseInt(document.getElementById("#form").elements['0512'].value,10);
+				var P10 = parseInt(document.getElementById("#form").elements['0516'].value,10);
+				var P11 = parseInt(document.getElementById("#form").elements['0517'].value,10);
+				var P12 = parseInt(document.getElementById("#form").elements['0521'].value,10);
+				
+				var CalcIncome = P1+P2+P3+P4+P5+P6+P7+P8+P9+P10+P11+P12;
+
+				var D1 = parseInt(document.getElementById("#form").elements['5408'].value,10);
+				var D2 = parseInt(document.getElementById("#form").elements['5446'].value,10);
+				var D3 = parseInt(document.getElementById("#form").elements['5461'].value,10);
+				var D4 = parseInt(document.getElementById("#form").elements['5463'].value,10);
+				var D5 = parseInt(document.getElementById("#form").elements['5540'].value,10);
+				var D6 = parseInt(document.getElementById("#form").elements['5541'].value,10);
+				var D7 = parseInt(document.getElementById("#form").elements['5542'].value,10);
+
+				var CalcDeducciones = D1+D2+D3+D4+D5+D6+D7;
+				var CalcNetIncome = CalcIncome - CalcDeducciones;
+
+				var ReportedDeducciones = parseInt(document.getElementById("#form").elements['deducciones'].value,10);
+				var Dother = ReportedDeducciones - CalcDeducciones;
+
+				var CapacidadDescuento = CalcNetIncome * 0.3;
+
+				var MaximaPrimaPosible = CapacidadDescuento - Dother;
+
+
+				document.getElementById("capacidad").innerHTML = MaximaPrimaPosible;
+					}
+				</script>
