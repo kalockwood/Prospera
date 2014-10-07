@@ -16,6 +16,3 @@
 //= require bootstrap.js
 //= require_tree .
 
-$(document).on("page:load ready", function(){
-    $("input.datepicker").datepicker();
-});
